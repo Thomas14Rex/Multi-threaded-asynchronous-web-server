@@ -8,6 +8,6 @@ PORT = 65432  # The port used by the server
 with socket.socket(socket.AF_INET, socket.SOCK_STREAM) as s:
     s.connect((HOST, PORT))
     s.sendall(b"Hello, world")
-    data = s.recv(1024)
+    data = s.recv(1024) #The size of the maximum data that can be received
 
 print(f"Received {data!r}")
